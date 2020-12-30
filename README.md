@@ -1,7 +1,6 @@
 # Curso em Video
- 
-  **
-The reason I'm doing this, is that I want to track my progress over the years. From my very first script to today; **
+
+  **The reason I'm doing this, is that I want to track my progress over the years. From my very first script to today**
   
   _Channel on youtube: [Curso em Vídeo](https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ)_
  
