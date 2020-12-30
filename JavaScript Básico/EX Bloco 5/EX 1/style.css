@@ -1,0 +1,59 @@
+body {
+    background: rgb(49, 181, 221);
+    font : normal 15pt Arial;
+    font-weight: bold;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background : white;
+    border-radius : 10px;
+    padding :15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.336);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+.user {
+    box-shadow: 1px 1px 4px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    border: solid 1px black
+}
+
+.buttons {
+    position: relative;
+    left: 175px;
+    margin: 20px 0 0 0;
+    font-weight: bold;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: 0;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    border: snow;
+    box-shadow: 1px 1px 5px;
+}
+
+.values {
+    border-radius: 10px;
+    outline: 0;
+    width: 70px;
+    text-align: center;
+    padding: 5px 2px 5px 2px;
+    font-weight: bold;
+    font-style: italic;
+    border: solid 1px white;
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+}

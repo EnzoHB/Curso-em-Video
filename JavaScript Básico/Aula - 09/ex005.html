@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Document</title>
+    <style>
+        body {
+
+            background: rgb(119, 7, 7);
+            color: white;
+            font: Normal 20 arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id= 'title' class="title" name = 'firstTitle'>Iniciando Eventos DOM</h1>
+
+    <p id = 'p0' class = 'paragraph' name = 'randomP'>Teste de parágrafo aleatório 1</p>
+    <p id = 'p1' class = 'paragraph' name = 'randomP'>Teste de parágrafo aleatório 2</p>
+
+    <div id = 'div0' class = 'div' name = 'randomD'>Essa é uma DIV aleatória</div>
+    <div id = 'div1' class = 'div' name = 'randomD'>Essa é uma DIV aleatória</div>
+    <div id = 'div2' class = 'div' name = 'randomD'>Essa é uma <strong>DIV (Com as tags strong)</strong> aleatória</br></div>
+
+        <script>
+
+        //Script que muda a cor da fonte e a cor do fundo
+            let bodyBackground = prompt(`Por favor, digite a cor do fundo em inglês`)
+            let fontColor = prompt(`Por favor, digite a cor da fonte em inglês`)
+            document.body.style.background = bodyBackground
+            document.body.style.color = fontColor
+
+            //Algumas informações adicionais
+                document.write(`${window.navigator.appName} <br><br> ${window.document.URL} <br><br >${window.document.charset}`)
+
+                //getElementsByTagName
+                    let firstTagName = document.getElementsByTagName(`p`)[0]; // Parâmetros começam do zero. Peguei o "Elemento 0 com a Tag <p>"
+                    let secondTagName = document.getElementsByTagName(`p`)[1]; // Mesma coisa
+                    firstTagName.style.color = `red`;
+                    secondTagName.style.color = 'yellow';
+
+                    //getElementById
+                        let firstId = document.getElementById(`p0`); // Aqui não temos parâmetros, porque o ID precisa ser único
+                        let secondId = document.getElementById(`div0`);
+                        firstId.innerText = `Esse parágrafo foi alterado pelo JS`;
+                        secondId.innerText = `Essa Div foi altareda pelo JS`;
+
+                        //getElementsByName e getElementsByClassName | Os dois são bem parecidos, por isso vou colocá-los como iguais
+                            let firstName = document.getElementsByName(`randomP`)[0];
+                            let firstClass = document.getElementsByClassName (`div`) [1];
+                            firstName.style.background = `yellow`; firstName.style.color = `black`;
+                            firstClass.style.background = `white`; firstClass.style.color = `black`;
+
+        //querySelector - Método por CSS, mais recente e padronizado pelo ECMA
+            let testeQuery = document.querySelector(`div#div2`) // DIV - ID ou CLASS - BINDING | # == Id; . == Class
+            let testeSelector = document.querySelector(`div.div`)// Está dando problema ao colocar parâmetro não sei o porquê.
+            console.log(testeQuery, testeSelector)
+
+            console.log(`Essa é uma linha \n Essa é outra`)
+
+        </script>
+</body>
+</html>

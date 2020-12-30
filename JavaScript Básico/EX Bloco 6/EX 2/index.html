@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de exercício</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Number Analyzer</h1>
+    </header>
+    <section>
+        <div class = "userInputs">
+            <p class = "p">Adicione Números: <input type="text" placeholder= "0" class="numberSelector" maxlength="3" onmouseover="resetReadOnly(element[0])" onmouseout="setReadOnly(element[0])"> 
+                <button class="buttons" onmousedown="add(element[0].value)">ADD</button>  
+                <button class="buttons"onmousedown="del()">DEL</button></p>
+        </div>
+        <div class = "results">
+            <select class="output" id="output" size="5">
+            </select>
+            <div class = "analyzes">
+                <p>List size: <input type="text" class="findIndex" readonly></p>
+                <p>Maior valor: <input type="text" class="findIndex" readonly></p>
+                <p>Menor valor: <input type="text" class="findIndex" readonly></p>
+                <p>Soma total: <input type="text" class="findIndex" readonly style="width: 100px;"></p>
+                <p>Média: <input type="text" class="findIndex" readonly style="width: 50px;"></p>
+                <p>Mediana: <input type="text" class="findIndex" readonly></p>
+                <p>Moda: <input type="text" class="findIndex" readonly style="width: 100px;"> --> </p>
+                <p>MMC: <input type="text" class="findIndex" readonly> --> </p>
+                <p>MDC: <input type="text" class="findIndex" readonly></p>
+                <button class="troll" onmousedown="del(1)">Excluir todos os valores</button>
+            </div>
+        </div>
+        <div class = "generate">
+            <button class="troll1" onclick="listGenerator(0, 100)">Gerar lista aleatória (100)</button>
+            <button class="troll1" onclick="listGenerator(1)">Gerar lista sequencial (100)</button>
+            <button class="troll1" onclick="listGenerator(0, 1000)">Gerar lista aleatória (1000)</button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;N.Analyzer 2020</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

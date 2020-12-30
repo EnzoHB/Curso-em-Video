@@ -1,0 +1,239 @@
+/*------------------------------Model---------------------------------*/
+
+/*
+selector {
+
+    Miscelania-related-things;
+
+    border-related-things;
+
+    size-related-things;
+
+    font-related-things;
+
+    postion-related-things;
+}
+*/
+
+/*------------------------------Entire Body---------------------------*/
+
+body {
+
+    background: rgb(49, 181, 221);
+
+    font : normal 20pt Arial;
+    font-weight: bold;
+}
+
+header {
+
+    color: white;
+
+    text-align: center;
+}
+
+section {
+
+    background : white;
+
+    border-radius : 10px;
+    padding :15px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.336);
+
+    width: 600px;
+    min-height: 260px;
+}
+
+footer {
+    
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+/*-----------------------First Area - UserInputs-----------------------*/
+
+.userInputs {
+    text-align: center;
+}
+
+.numberSelector {
+
+    outline: 0;
+
+    border: solid 1px white ;
+    border-bottom: solid 3px lightblue;
+    padding: 5px 6px 5px 6px;
+    margin: 0 3px 0 3px;
+
+    width: 35px;
+    height: 15px;
+
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+
+    position: relative;
+    bottom: 2px;
+}
+
+.numberSelector:hover {
+
+    border-bottom: solid 3px white;
+    border-radius: 10px;
+    box-shadow: 0 0 3px;
+}
+
+.buttons {
+
+    outline:0;
+    background: linear-gradient(rgb(252, 252, 118), whiteSmoke);
+
+    border: solid 0.5px black;
+    border-radius: 10px;
+    box-shadow: 0 0 3px;
+
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.buttons:hover {
+
+    box-shadow: 0 0 5px purple;
+    border: solid 1px black;
+}
+
+.p {
+
+    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
+    border-bottom: solid 2px black;
+}
+
+/*--------------------------Second Area-----------------------------*/
+
+.results {
+
+    display: flex;
+}
+
+/*------Select---------*/
+
+.output {
+
+    outline: 0;
+
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 2px 15px 2px 15px;
+
+    width: 280px;
+
+    text-align: center;
+
+    position: relative;
+    left: 5px ;
+
+}
+
+.element {
+
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    margin: 10px 0 8px 0;
+
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.element:hover {
+
+    box-shadow: 2px 2px 10px;
+}
+
+/*-------Analyzes--------*/
+
+.analyzes {
+
+    margin: 5px 30px 0 30px;
+    padding: 0 20px 10px 20px;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+
+    width: 225px;
+
+    font-weight: bold;
+    font-size: medium;
+}
+
+.findIndex {
+
+    outline: 0;
+
+    border: solid 1px white ;
+    padding: 3px 4px 6px 4px;
+    margin: 0 2px 0 2px;
+    border-bottom: solid 3px lightblue;
+    
+    width: 50px;
+    height: 10px;
+
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+
+    position: relative;
+    bottom: 1px;
+}
+
+.troll {
+
+    outline:0;
+    background: linear-gradient(rgb(252, 252, 118), whiteSmoke);
+
+    border-radius: 6px;
+    border: solid 1px white;
+    padding: 5px;
+    border: solid 0.5px black;
+
+    height: 35px;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/*--------------Third Area - List Generator-------------------*/
+
+.troll:hover, .troll1:hover {
+
+    box-shadow: 0 0 3px;
+    border: solid 1px black;
+}
+
+.troll1 {
+
+    outline:0;
+    background: linear-gradient(rgb(252, 252, 118), whiteSmoke);
+    display: inline-block;
+
+    border-radius: 15px;
+    margin: 0 20px 0 20px;
+    border: solid 0.5px black;
+
+    width: 150px;
+    height: 50px;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.generate {
+
+    border-top: solid 2px black ;
+    margin: 20px 0 0 0;
+    padding: 20px 0 0 0;
+
+    text-align: center;
+}

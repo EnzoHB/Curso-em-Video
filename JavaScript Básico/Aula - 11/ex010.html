@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentran</title>
+</head>
+
+<body>
+
+    <h1>Gerador de Multas</h1>
+    <p>Type your velocity here</p>
+
+    <input type="number" id="velo" value='0'> km/h
+
+    <input type="button" value="Verify" onclick='calculate(fValue())'>
+
+    <p id='res'></p>
+    <p id='bah'></p>
+
+    <script>
+
+        function fValue() { return velo.value }
+
+        function calculate(x) {
+            if (x > 60) { res.innerHTML = 'Multado' }
+            else res.innerHTML = `Dirija sempre com cinto de segurança`
+        }
+
+
+        let mama = document.querySelector(`p#bah`).innerText
+        mama = 'Os Guri'
+
+//O QUEEEEEEE??????? POR ALGUM MOTIVO, SE VOCÊ TRATAR O ID DE UM ELEMENTO COMO VARIÁVEL ELE FUNCIONA.
+// MAS QUANDO 
+
+    </script>
+</body>
+
+</html>

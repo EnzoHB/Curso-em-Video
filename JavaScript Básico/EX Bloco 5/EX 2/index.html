@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de exercício</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada Generator</h1>
+    </header>
+    <section>
+        <div>
+            <p>Adicione a tabuada que será gerada <input type="text" class="userInputs" maxlength="2"></p>
+            <p class="inputP">Adicione o comprimento <input type="text" class="userInputs" maxlength="3" onchange="getLength()"></p>
+        </div>
+        <select class="output" id="output"size="10">
+            <option class="element">Preencha os campos</option>
+        </select>
+    </section>
+    <footer>
+        <p>&copy;T.Generator 2020</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

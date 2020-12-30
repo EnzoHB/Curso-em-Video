@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores</title>
+    <style>
+
+        body {
+            background: white;
+            color: black;
+            font: normal 40px Arial; }
+
+        input.values {
+            font: normal 18px Arial; }
+
+        input.operação {
+            background: orange;
+            font: normal 20px Arial; }
+
+        p#result {
+            font: Normal 20px Arial; }
+
+    </style>
+</head>
+<body>
+ 
+<h1>Realizando Operações</h1>
+<p>Abaixo, coloque dois números e as operações serão realizadas</p>
+
+    <input type="number" class = 'values' id = "input0" onchange = changed()>
+    <input type="number" class = 'values' id = "input1" onchange = changed()>
+
+    <input type="button" class = 'operação' value="+" onclick = 'some (fValue(), sValue())'>
+    <input type="button" class = 'operação' value="-" onclick = 'subt (fValue(), sValue())'>
+    <input type="button" class = 'operação' value="x" onclick = 'mult (fValue(), sValue())'>
+    <input type="button" class = 'operação' value="/" onclick = 'divi (fValue(), sValue())'>
+    <input type="button" class = 'operação' value="x²"onclick = 'elev (fValue(), sValue())'>
+    <input type="button" class = 'operação' value="%" onclick = 'rest (fValue(), sValue())'>
+
+    <input type="color" id="color0" onchange = color()>
+    <p id ='result'></p>
+
+
+<script>
+
+// Aqui são as funções que são "pegam" os valores dos input#input0 e input#input1 e os colocam como parâmetros
+// de some()
+
+function fValue() { return Number(input0.value)}
+function sValue() { return Number(input1.value)}
+
+
+// Área dos cálculos. Aqui, existem as funções responsáveis por realizar as operações. 
+
+    function some(x, y) {
+        if (x == false || y == false) alert(`Você não digitou os valores corretos nos campos`)
+        else result.innerHTML = (` O Resultado da operação é <strong>${x + y}</strong>`) }
+
+    function subt(x, y) {
+        if ( x == false || y == false) alert(`Você não digitou os valores corretos nos campos`)
+        else result.innerHTML = (` O Resultado da operação é <strong>${x - y}</strong>`) }
+        
+    function mult(x, y) { 
+        if ( x == false || y == false) alert(`Você não digitou os valores corretos nos campos`)
+        else result.innerHTML = (` O Resultado da operação é <strong>${x * y}</strong>`) }
+
+    function divi(x, y) {
+        if ( x == false || y == false) alert(`Você não digitou os valores corretos nos campos`)
+        else result.innerHTML = (` O Resultado da operação é <strong>${x / y}</strong>`) }
+
+    function elev(x, y) {
+        if ( x == false || y == false) alert(`Você não digitou os valores corretos nos campos`)
+        else result.innerHTML = (` O Resultado da operação é <strong>${x ** y}</strong>`) }
+
+    function rest(x, y) {
+        if ( x == false || y == false) alert(`Você não digitou os valores corretos nos campos`)
+        else result.innerHTML = (` O Resultado da operação é <strong>${x % y}</strong>`) }
+
+// Área responsável por mudar a cor do fundo e por limpar os campos quando input#input0 e input#input1 
+// são alterados
+
+    function color() {document.body.style.background = color0.value }
+
+    function changed() { result.innerText = '' }
+
+// Basicamente, quando um botão é clicado, ele chama a função correspondente e esta chama as funções fValue() e sValue().
+// Nelas, os valores de input#input0 e input#input1 são retornados e estes se tornam-se agora, os parâmetros x e y da função correspondente.
+// Dentro da função correspondente, existe um teste lógico para determinar se x e y são diferentes de '' e 0. Uma vez que não, ele repõe
+// o texto html com a mensagem e o resultado da operação
+
+// Por favor, se você entendeu tudo e quiser me ajudar a deixar esse código ainda melhor, escreva aqui no meu comentário a sua sugestão.
+// Versão do código : 4.0 - comentário editado 6 vezes
+// Pessoas que ajudaram : Halk Hacking
+
+</script>
+
+</body>
+</html>

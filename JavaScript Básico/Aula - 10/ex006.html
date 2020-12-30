@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Document</title>
+    <style>
+        body {
+
+            background: rgb(51, 154, 238);
+            color: white;
+        }
+        div#div0 {
+
+            font: Normal 50 Arial;
+            background: red;
+            color: black;
+            height: 100px ;
+            width: 100px;
+            line-height: 100px;
+            text-align:center;
+
+        }
+        div.div1 {
+
+            font: Normal 50 Arial;
+            background: greenyellow;
+            color: black;
+            height: 100px ;
+            width: 100px;
+            line-height: 100px;
+            text-align:center;
+        }
+        div#div2 {
+
+            font: Normal 50 Arial;
+            background: orange;
+            color: black;
+            height: 100px ;
+            width: 100px;
+            line-height: 100px;
+            text-align:center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id= 'title' class="title" name = 'firstTitle'>Iniciando Eventos DOM</h1>
+    <p>Abaixo, uma DIV sem Strong</p>
+    <div id = 'div0' onclick = 'clicarDIV0()'lass = 'div0' name = 'randomD'>DIV</div>
+    <p> Essa é uma DIV com strong</p>
+    <div id = 'div1' onclick = 'clicarDIV1()' class = 'div1' name = 'randomD'><strong>DIV</strong></br></div>
+    <p> Entrou, Saiu, Clicou</p>
+    <div id = div2 onmouseover = 'entrou()' class = div2>DIV</div>
+
+        <script>
+            function clicarDIV0() {
+
+                let turnBlue = document.querySelector(`div#div0`);
+                turnBlue.style.background = `blue`; turnBlue.innerText = `Mudei o texto`; turnBlue.style.color = `white`
+                turnBlue.addEventListener(`mouseout`,saiu);
+                function saiu() {
+                    turnBlue.style.background = `red`; turnBlue.innerText = `DIV`; turnBlue.style.color = `black`
+                }
+            }
+            function clicarDIV1() {
+
+                let turnRed = document.querySelector(`div#div1`);
+                turnRed.style.background = `red`; turnRed.innerText = `Mudei o texto`; turnRed.style.color = `white`
+                turnRed.addEventListener(`mouseout`,saiu);
+                function saiu() {
+                    turnRed.style.background = `greenyellow`; turnRed.innerText = `DIV`; turnRed.style.color = `black`
+                }
+            }
+            function entrou() {
+
+                let div2 = document.querySelector(`div.div2`)
+                div2.style.background = `yellow`; div2.innerText = `Entrou`; div2.style.color = `blue`
+                div2.addEventListener(`click`, clicou);
+                div2.addEventListener(`mouseout`, saiu);
+                function clicou() {
+
+                    div2.style.background = `yellow`; div2.innerText = `Clicou`; div2.style.color = `blue` 
+                }
+                function saiu(){
+
+                        div2.style.background = `orange`; div2.style.color = `black`; div2.innerText = `DIV`
+                    }
+                }
+        </script>
+</body>
+</html>

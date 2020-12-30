@@ -1,0 +1,1 @@
+for(let e = 1; e <= 8; e++) console.log(`Passo ${e}°`)

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de exercício</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Teste de idade e Gênero</h1>
+    </header>
+    <section style = 'font-size:medium; font-weight: bold;' id= 'variables'>
+        <div id = 'getBirthYear'>
+            Digite aqui o ano que você nasceu : <input type="number" class= 'inputs' id="birthYear" style='width: 50px' min="1900" maxlength="4">
+        </div>
+        <div id = 'genderVerifyer'>
+            Digite seu Gênero : <input type="radio" name = 'checkboxes' id="man" checked> Homem | <input type="radio" name = 'checkboxes' id="woman"> Mulher
+        </div>
+        <div id= 'genderError'></div>
+        <div style = 'text-align:end'> <input type="button" value="VERIFICAR" style = 'margin-top: 10px; padding:4px; background : white; font-weight: bolder;' onclick="verify()"> </div>
+        </div>
+        <div id= 'result' style = 'text-align: center;'></div>
+        <div style="text-align: center; margin-top: 10px;"><img id = 'photores'></div>
+    </section>
+    <footer>
+        <p>&copy;elock</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
